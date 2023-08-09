@@ -1,4 +1,5 @@
 ﻿  EndScene.cpp
-  TitleScene.cpp
+  GameMain.cpp
+  Input.cpp
   コードを生成中...
   kadai2.vcxproj -> C:\PG\kadai2MaezatoAito\kadai2\x64\Debug\kadai2.exe

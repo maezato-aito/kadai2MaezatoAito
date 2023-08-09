@@ -20,9 +20,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AbstractScene.h" />
+    <ClInclude Include="comon.h" />
     <ClInclude Include="EndScene.h" />
     <ClInclude Include="FpsCont.h" />
     <ClInclude Include="GameMain.h" />
+    <ClInclude Include="Input.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="TitleScene.h" />
   </ItemGroup>
@@ -30,6 +32,7 @@
     <ClCompile Include="EndScene.cpp" />
     <ClCompile Include="FpsCont.cpp" />
     <ClCompile Include="GameMain.cpp" />
+    <ClCompile Include="Input.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="TitleScene.cpp" />

@@ -24,7 +24,7 @@ void GameMain::Draw() const
 {
 	
 	DrawString (0, 0, "ゲームメイン", 0xff3355, TRUE);
-	
+	/*DrawFormatString(20,0,0xff3355,"%d",)*/
 }
 //シーンの切り替え
 AbstractScene* GameMain::change()

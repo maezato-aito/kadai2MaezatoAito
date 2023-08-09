@@ -1,13 +1,14 @@
 #pragma once
 #include"AbstractScene.h"
 #include"SceneManager.h"
+#include"Input.h"
 
 
 
 class GameMain :public AbstractScene
 {
 private:
-
+	Input* input;
 public:
 	//コンストラクタ
 	GameMain();
