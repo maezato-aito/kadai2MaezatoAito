@@ -1,8 +1,9 @@
 #include"TitleScene.h"
-#include"SceneManager.h"
 #include"GameMain.h"
 #include"EndScene.h"
 #include"DxLib.h"
+
+
 
 //コンストラクタ（呼び出し）
 TitleScene::TitleScene() 
@@ -19,26 +20,24 @@ TitleScene::~TitleScene()
 //描画以外の更新
 void TitleScene::Update()
 {
+	a = Input::Update();
 
-	OldKey = NowKey;
-	NowKey = GetJoypadInputState(DX_INPUT_KEY_PAD1);
-	KeyFlg = NowKey & ~OldKey;
-
-	if (KeyFlg & PAD_INPUT_DOWN)
+	/*if (b & PAD_INPUT_DOWN)
 	{
 		++menyu;
 		if (++menyu > 2)
 		{
 			menyu = 0;
 		}
-	}
-	if (KeyFlg & PAD_INPUT_UP) {
+	}*/
+
+	/*if (KeyFlg & PAD_INPUT_UP) {
 		--menyu;
 		if (--menyu < 0)
 		{
 			menyu = 2;
 		}
-	}
+	}*/
 }
 //描画の更新
 void TitleScene::Draw() const 
@@ -54,13 +53,17 @@ void TitleScene::Draw() const
 
 	//カーソル描画
 	DrawTriangle(CursorX, CursorY + cursor, CursorX, CursorY + 50 + cursor, CursorX + 25, CursorY + 25 + cursor, 0x123456, TRUE);
+	SetFontSize(50);
+	DrawString(260+25, 245, "Game", 0xffffff, TRUE);
+	DrawString(260+25, 245+50, "Game", 0xffffff, TRUE);
 
-	DrawFormatString(20, 20, 0x746378, "%d", menyu, TRUE);
+	DrawFormatString(20, 20, 0x746378, "%d",a, TRUE);
 }
 //シーンの切り替え
 AbstractScene* TitleScene::change() 
 {
-	if (KeyFlg & PAD_INPUT_A) {
+
+	/*if (KeyFlg & PAD_INPUT_A) {
 		if (menyu == 0)
 		{
 			return new GameMain();
@@ -71,7 +74,7 @@ AbstractScene* TitleScene::change()
 		{
 			return new EndScene();
 		}
-	}
+	}*/
 
 	return this;
 }

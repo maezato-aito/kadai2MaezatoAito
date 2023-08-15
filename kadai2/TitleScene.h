@@ -1,20 +1,22 @@
 #pragma once
 #include"AbstractScene.h"
 #include"SceneManager.h"
+#include"Input.h"
 
 class TitleScene :public AbstractScene 
 {
 private:
+	Input* input;
+
+	int menyu;
+
+	int a;
+	int CursorX;
+	int CursorY;
 
 public:
 
-	int  OldKey;
-	int  NowKey;
-	int  KeyFlg;
-	int menyu;
-
-	int CursorX;
-	int CursorY;
+	
 	
 	//コンストラクタ
 	TitleScene();
