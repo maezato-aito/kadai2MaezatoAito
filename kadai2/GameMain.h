@@ -2,13 +2,13 @@
 #include"AbstractScene.h"
 #include"SceneManager.h"
 #include"Input.h"
-
+#include"Player.h"
 
 
 class GameMain :public AbstractScene
 {
 private:
-	Input* input;
+	Player* player;
 public:
 	//コンストラクタ
 	GameMain();

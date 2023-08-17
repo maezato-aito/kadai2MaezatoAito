@@ -1,0 +1,12 @@
+#pragma once
+class SphereCollider
+{
+public:
+	int locationX;//Xç¿ïW
+	int locationY;//Yç¿ïW
+
+	int radius;//îºåa
+
+	int CheckCollision();
+
+ };

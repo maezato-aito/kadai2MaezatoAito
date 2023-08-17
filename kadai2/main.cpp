@@ -1,7 +1,8 @@
-#include"AbstractScene.h"
 #include"DxLib.h"
+#include"AbstractScene.h"
 #include"SceneManager.h"
-#include"TitleScene.h"
+//#include"TitleScene.h"
+#include"GameMain.h"
 #include"FpsCont.h"
 
 
@@ -26,7 +27,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 		return -1;
 	}
 
-	SceneManager SMG(dynamic_cast<AbstractScene*>(new TitleScene));
+	SceneManager SMG(dynamic_cast<AbstractScene*>(new GameMain));
 
 	//ÉQÅ[ÉÄÉãÅ[Év
 	while (ProcessMessage() == 0 && SMG.change() != nullptr) 

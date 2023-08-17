@@ -20,8 +20,6 @@ TitleScene::~TitleScene()
 //描画以外の更新
 void TitleScene::Update()
 {
-	a = Input::Update();
-
 	/*if (b & PAD_INPUT_DOWN)
 	{
 		++menyu;
@@ -57,7 +55,8 @@ void TitleScene::Draw() const
 	DrawString(260+25, 245, "Game", 0xffffff, TRUE);
 	DrawString(260+25, 245+50, "Game", 0xffffff, TRUE);
 
-	DrawFormatString(20, 20, 0x746378, "%d",a, TRUE);
+	DrawFormatString(20, 20, 0x746378, "X:%d",a, TRUE);
+	DrawFormatString(20, 80, 0x746378, "Y:%d",b, TRUE);
 }
 //シーンの切り替え
 AbstractScene* TitleScene::change() 

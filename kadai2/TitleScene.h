@@ -11,6 +11,7 @@ private:
 	int menyu;
 
 	int a;
+	int b;
 	int CursorX;
 	int CursorY;
 

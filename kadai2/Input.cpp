@@ -9,9 +9,21 @@ int Input::KeyFlg;
 
 int Input::Update()
 {
+	return 0;
+}
+
+int Input::Get_AnlogSticX()
+{
 	GetJoypadAnalogInput(&AnalogStickX, &AnalogStickY, DX_INPUT_KEY_PAD1);
 
-	return AnalogStickX , AnalogStickY;
+	return AnalogStickX;
+}
+
+int Input::Get_AnlogSticY()
+{
+	GetJoypadAnalogInput(&AnalogStickX, &AnalogStickY, DX_INPUT_KEY_PAD1);
+
+	return AnalogStickY;
 }
 
 int Input::Get_NowKey()
