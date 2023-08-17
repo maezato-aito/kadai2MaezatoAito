@@ -14,7 +14,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	ChangeWindowMode(TRUE);
 
 	//‰æ–ÊƒTƒCƒY
-	SetGraphMode(1280, 720, 32);
+	SetGraphMode(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_BIT);
 
 	//— ‰æ–Ê•`‰æ
 	SetDrawScreen(DX_SCREEN_BACK);

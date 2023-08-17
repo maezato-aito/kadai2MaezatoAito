@@ -16,15 +16,13 @@ GameMain::~GameMain()
 void GameMain::Update()
 {
 	player->Update();
-	
-
 }
 //描画の更新
 void GameMain::Draw() const
 {
 	DrawString (0, 0, "ゲームメイン", 0xff3355, TRUE);
 	
-	player->Update();
+	player->Draw();
 }
 //シーンの切り替え
 AbstractScene* GameMain::change()
