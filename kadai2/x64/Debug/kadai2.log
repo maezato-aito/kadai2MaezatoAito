@@ -1,2 +1,4 @@
 ﻿  Player.cpp
+C:\PG\kadai2MaezatoAito\kadai2\Player.cpp(31,15): warning C4804: '<': 演算中の 'bool' 型の使用方法が安全ではありません
+C:\PG\kadai2MaezatoAito\kadai2\Player.cpp(31,54): warning C4804: '<': 演算中の 'bool' 型の使用方法が安全ではありません
   kadai2.vcxproj -> C:\PG\kadai2MaezatoAito\kadai2\x64\Debug\kadai2.exe
