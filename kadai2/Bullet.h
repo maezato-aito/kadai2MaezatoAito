@@ -1,13 +1,14 @@
 #pragma once
 #include"SphereCollider.h"
+#include"comon.h"
 
 class Bullet:public SphereCollider
 {
 public://アクセス可能
 
-	virtual void Update() = 0;//ゲームメインシーンをポインタで受け取る
-	virtual void Draw() = 0;
-	virtual void Hit() = 0;//ダメージを受けた時の処理
+	void Update();//ゲームメインシーンをポインタで受け取る
+	void Draw();
+	void Hit();//ダメージを受けた時の処理
 
 protected://継承
 

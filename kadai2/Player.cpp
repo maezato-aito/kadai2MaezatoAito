@@ -4,6 +4,7 @@
 
 Player::Player()
 {
+	//リモコンの左スティックの入力受け取り
 	Get_MoveX = 0;
 	Get_MoveY = 0;
 
@@ -16,6 +17,9 @@ Player::Player()
 	
 	//プレイヤーの半径
 	radius = 30;
+
+	//弾の変数の入力
+
 	//プレイヤーの画像
 	/*image = LoadGraph("");*/
 }

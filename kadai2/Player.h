@@ -1,10 +1,11 @@
 #pragma once
 #include"comon.h"
 #include"CharaBase.h"
+#include"Bullet.h"
 
 #include"Input.h"
 
-class Player:public CharaBase
+class Player:CharaBase
 {
 public:
 	Player();
