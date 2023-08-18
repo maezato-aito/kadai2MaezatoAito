@@ -14,6 +14,8 @@ Player::Player()
 	//プレイヤーの移動速度
 	speed = 3;
 	
+	//プレイヤーの半径
+	radius = 30;
 	//プレイヤーの画像
 	/*image = LoadGraph("");*/
 }
@@ -28,35 +30,33 @@ void Player::Update()
 	//アナログスティックの入力の受け取り
 	Get_MoveX = Input::Get_AnlogSticX();
 	Get_MoveY = Input::Get_AnlogSticY();
-	if (WINDOW_X <= locationX <= WINDOW_WIDTH && WINDOW_Y <= locationY <= WINDOW_HEIGHT) 
-	{
+
 		//プレイヤーの横移動(左)
-		if (Get_MoveX <= -1)
+		if (Get_MoveX <= -1 && WINDOW_X + radius < locationX)
 		{
 			locationX -= speed;
 		}
 		//プレイヤーの横移動(右)
-		else if (1 <= Get_MoveX)
+		if (1 <= Get_MoveX && locationX < WINDOW_WIDTH - radius)
 		{
 			locationX += speed;
 		}
 
 		//プレイヤーの縦の移動(上)
-		if (Get_MoveY <= -1)
+		if (Get_MoveY <= -1 && WINDOW_Y + radius < locationY)
 		{
 			locationY -= speed;
 		}
 		//プレイヤーの縦の移動(下)
-		else if (Get_MoveY >= 1)
+		if (Get_MoveY >= 1 && locationY < WINDOW_HEIGHT - radius)
 		{
 			locationY += speed;
 		}
-	}
 }
 
 void Player::Draw()
 {
-	DrawCircle(locationX, locationY, 20, 0xffffff, TRUE);
+	DrawCircle(locationX, locationY, radius, 0xffffff, TRUE);
 
 	//傾き描画
 	DrawFormatString(0, 0, 0xffffff, "%d", Get_MoveX, TRUE);
