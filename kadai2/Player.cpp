@@ -1,7 +1,5 @@
 #include"Player.h"
 
-
-
 Player::Player()
 {
 	//リモコンの左スティックの入力受け取り
@@ -18,15 +16,18 @@ Player::Player()
 	//プレイヤーの半径
 	radius = 30;
 
-	//弾の変数の入力
+	//弾
+	nwayspawner = new NwaySpawner();
 
 	//プレイヤーの画像
 	/*image = LoadGraph("");*/
+
+
 }
 
 Player::~Player()
 {
-
+	delete nwayspawner;
 }
 
 void Player::Update()
@@ -34,6 +35,9 @@ void Player::Update()
 	//アナログスティックの入力の受け取り
 	Get_MoveX = Input::Get_AnlogSticX();
 	Get_MoveY = Input::Get_AnlogSticY();
+
+		//	tamawo 
+	nwayspawner->Shoot();
 
 		//プレイヤーの横移動(左)
 		if (Get_MoveX <= -1 && WINDOW_X + radius < locationX)
@@ -56,11 +60,14 @@ void Player::Update()
 		{
 			locationY += speed;
 		}
+
+
 }
 
 void Player::Draw()
 {
 	DrawCircle(locationX, locationY, radius, 0xffffff, TRUE);
+	DrawString(locationX, locationY, "P", 0xff3344, TRUE);
 
 	//傾き描画
 	DrawFormatString(0, 0, 0xffffff, "%d", Get_MoveX, TRUE);

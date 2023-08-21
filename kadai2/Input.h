@@ -6,11 +6,10 @@ public:
 
 	static int Update();
 
-	static int Get_OldKey(); //‘O‰ñ‚Ì“ü—Í
-	static int Get_NowKey(); //¡‰ñ‚Ì“ü—Í
-
 	static int Get_AnlogSticX();
 	static int Get_AnlogSticY();
+
+	//static int Get_key();
 
 private:
 	static int AnalogStickX;

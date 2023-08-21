@@ -27,6 +27,8 @@
     <ClInclude Include="FpsCont.h" />
     <ClInclude Include="GameMain.h" />
     <ClInclude Include="Input.h" />
+    <ClInclude Include="BulletsSpawner.h" />
+    <ClInclude Include="NwaySpawner.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="SphereCollider.h" />

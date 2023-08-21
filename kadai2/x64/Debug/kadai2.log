@@ -1,4 +1,13 @@
-﻿  SphereCollider.cpp
+﻿  Bullet.cpp
+  CharaBase.cpp
+  EndScene.cpp
+  FpsCont.cpp
+  GameMain.cpp
+  Input.cpp
+  main.cpp
+  Player.cpp
+  SceneManager.cpp
+  SphereCollider.cpp
   TitleScene.cpp
   コードを生成中...
   kadai2.vcxproj -> C:\PG\kadai2MaezatoAito\kadai2\x64\Debug\kadai2.exe

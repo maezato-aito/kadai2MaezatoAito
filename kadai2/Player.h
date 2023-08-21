@@ -1,7 +1,7 @@
 #pragma once
 #include"comon.h"
 #include"CharaBase.h"
-#include"Bullet.h"
+#include"NwaySpawner.h"
 
 #include"Input.h"
 
@@ -10,6 +10,8 @@ class Player:CharaBase
 public:
 	Player();
 	~Player();
+
+	NwaySpawner* nwayspawner;
 
 	void Update() override;
 

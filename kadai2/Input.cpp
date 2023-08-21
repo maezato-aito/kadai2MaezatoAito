@@ -26,17 +26,7 @@ int Input::Get_AnlogSticY()
 	return AnalogStickY;
 }
 
-int Input::Get_NowKey()
-{
-	int a = AnalogStickX;
-
-	return a;
-}
-
-int Input::Get_OldKey()
-{
-	
-	KeyFlg = Get_NowKey() & ~OldKey;
-
-	return KeyFlg;
-}
+//int Input::Get_key()
+//{
+//
+//}
