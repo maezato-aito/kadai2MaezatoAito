@@ -20,7 +20,7 @@ Player::Player()
 	radius = 30;
 
 	//’e
-	nwayspawner = new NwaySpawner();
+	//weapon = new BulletsSpawner();
 
 	//ƒvƒŒƒCƒ„[‚Ì‰æ‘œ
 	/*image = LoadGraph("");*/
@@ -30,7 +30,7 @@ Player::Player()
 
 Player::~Player()
 {
-	delete nwayspawner;
+
 }
 
 void Player::Update()
@@ -46,7 +46,7 @@ void Player::Update()
 	if (Get_Button == XINPUT_BUTTON_A) 
 	{
 		//’e‚ðŒÄ‚Ño‚·
-		nwayspawner->Shoot();
+		
 
 		DrawString(0, 160, "”­ŽË", 0xffffff, TRUE);
 	}

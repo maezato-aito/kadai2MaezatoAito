@@ -1,9 +1,11 @@
 #pragma once
 #include"BulletsSpawner.h"
 
-class NwaySpawner:BulletsSpaWner
+class NwaySpawner:BulletsSpawner
 {
 public:
+	NwaySpawner();
+	~NwaySpawner();
 	void Shoot() override;
 
 protected:
@@ -15,5 +17,6 @@ protected:
 
 private:
 
+	Bullet* bullet;
 };
 

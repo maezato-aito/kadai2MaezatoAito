@@ -1,7 +1,7 @@
 #pragma once
 #include"comon.h"
 #include"CharaBase.h"
-#include"NwaySpawner.h"
+#include"BulletsSpawner.h"
 
 #include"Input.h"
 
@@ -11,7 +11,7 @@ public:
 	Player();
 	~Player();
 
-	NwaySpawner* nwayspawner;
+	/*BulletsSpawner* weapon;*/
 
 	void Update() override;
 
