@@ -4,8 +4,6 @@ class Input
 {
 public:
 
-	static int Update();
-
 	static int Get_LAnlogSticX();
 	static int Get_LAnlogSticY();
 
@@ -32,7 +30,7 @@ private:
 	static int L_AnalogStickY;
 
 	static int Key;
-	/*static int OldKey;
-	static int NowKey;
-	static int KeyFlg;*/
+	static char OldKey[16];
+	static char NowKey[16];
+	
 };

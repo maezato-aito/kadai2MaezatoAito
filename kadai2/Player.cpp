@@ -38,11 +38,18 @@ void Player::Update()
 	//アナログスティックの入力の受け取り
 	Get_MoveX = Input::Get_LAnlogSticX();
 	Get_MoveY = Input::Get_LAnlogSticY();
+
+	//入力ボタンを変数に入れる
 	Get_Button = Input::Get_Buttons();
 
-
+	//Aボタンが押されたら
+	if (Get_Button == XINPUT_BUTTON_A) 
+	{
 		//弾を呼び出す
 		nwayspawner->Shoot();
+
+		DrawString(0, 160, "発射", 0xffffff, TRUE);
+	}
 
 		//プレイヤーの横移動(左)
 		if (Get_MoveX <= -1 && WINDOW_X + radius < locationX)
@@ -81,7 +88,7 @@ void Player::Draw()
 	DrawFormatString(0, 80, 0xffffff, "%d", locationX, TRUE);
 	DrawFormatString(0, 120, 0xffffff, "%d", locationY, TRUE);
 
-	DrawFormatString(0, 160, 0xffffff, "%d", Get_Button, TRUE);
+	
 
 }
 

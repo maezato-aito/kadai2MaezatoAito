@@ -1,9 +1,9 @@
 ﻿  EndScene.cpp
   GameMain.cpp
   Input.cpp
-C:\PG\kadai2MaezatoAito\kadai2\Input.cpp(31,21): error C2440: '=': 'unsigned char [16]' から 'int' に変換できません。
-C:\PG\kadai2MaezatoAito\kadai2\Input.cpp(31,13): message : この変換が可能なコンテキストはありません。
-  main.cpp
   Player.cpp
   TitleScene.cpp
+  main.cpp
   コードを生成中...
+C:\PG\kadai2MaezatoAito\kadai2\Input.cpp(45): warning C4715: 'Input::Get_Buttons': 値を返さないコントロール パスがあります。
+  kadai2.vcxproj -> C:\PG\kadai2MaezatoAito\kadai2\x64\Debug\kadai2.exe
