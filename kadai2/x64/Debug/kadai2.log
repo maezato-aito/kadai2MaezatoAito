@@ -1,13 +1,9 @@
-﻿  Bullet.cpp
-  CharaBase.cpp
-  EndScene.cpp
-  FpsCont.cpp
+﻿  EndScene.cpp
   GameMain.cpp
   Input.cpp
+C:\PG\kadai2MaezatoAito\kadai2\Input.cpp(31,21): error C2440: '=': 'unsigned char [16]' から 'int' に変換できません。
+C:\PG\kadai2MaezatoAito\kadai2\Input.cpp(31,13): message : この変換が可能なコンテキストはありません。
   main.cpp
   Player.cpp
-  SceneManager.cpp
-  SphereCollider.cpp
   TitleScene.cpp
   コードを生成中...
-  kadai2.vcxproj -> C:\PG\kadai2MaezatoAito\kadai2\x64\Debug\kadai2.exe

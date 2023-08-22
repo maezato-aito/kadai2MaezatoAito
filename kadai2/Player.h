@@ -25,5 +25,7 @@ private:
 	int Get_MoveX;
 	int Get_MoveY;
 
+	char Get_Button;
+
 };
 

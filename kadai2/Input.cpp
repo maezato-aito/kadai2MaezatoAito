@@ -1,32 +1,34 @@
 #include"Input.h"
 
-int Input::AnalogStickX = 0;
-int Input::AnalogStickY = 0;
+int Input::L_AnalogStickX = 0;
+int Input::L_AnalogStickY = 0;
 
-int Input::OldKey;
-int Input::NowKey;
-int Input::KeyFlg;
+XINPUT_STATE input;
 
 int Input::Update()
 {
-	return 0;
+
 }
 
-int Input::Get_AnlogSticX()
+int Input::Get_LAnlogSticX()
 {
-	GetJoypadAnalogInput(&AnalogStickX, &AnalogStickY, DX_INPUT_KEY_PAD1);
 
-	return AnalogStickX;
 }
 
-int Input::Get_AnlogSticY()
+int Input::Get_LAnlogSticY()
 {
-	GetJoypadAnalogInput(&AnalogStickX, &AnalogStickY, DX_INPUT_KEY_PAD1);
+	GetJoypadXInputState(DX_INPUT_PAD1, &input);
 
-	return AnalogStickY;
+	L_AnalogStickY = input.ThumbLY;
+
+	return L_AnalogStickY;
 }
 
-//int Input::Get_key()
-//{
-//
-//}
+int Input::Get_Buttons()
+{
+	GetJoypadXInputState(DX_INPUT_PAD1, &input);
+
+	Key = input.Buttons;
+
+	return Key;
+}

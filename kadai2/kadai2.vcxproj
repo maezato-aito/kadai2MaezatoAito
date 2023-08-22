@@ -42,6 +42,7 @@
     <ClCompile Include="GameMain.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="NwaySpawner.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="SphereCollider.cpp" />

@@ -2,9 +2,12 @@
 
 Player::Player()
 {
-	//リモコンの左スティックの入力受け取り
+	//リモコンの左スティックの入力受け取り用変数
 	Get_MoveX = 0;
 	Get_MoveY = 0;
+
+	//リモコンのボタン入力の受け取り用変数
+	Get_Button = 0;
 
 	//プレイヤーの座標
 	locationX = 150;
@@ -33,11 +36,13 @@ Player::~Player()
 void Player::Update()
 {
 	//アナログスティックの入力の受け取り
-	Get_MoveX = Input::Get_AnlogSticX();
-	Get_MoveY = Input::Get_AnlogSticY();
+	Get_MoveX = Input::Get_LAnlogSticX();
+	Get_MoveY = Input::Get_LAnlogSticY();
+	Get_Button = Input::Get_Buttons();
 
-		//	tamawo 
-	nwayspawner->Shoot();
+
+		//弾を呼び出す
+		nwayspawner->Shoot();
 
 		//プレイヤーの横移動(左)
 		if (Get_MoveX <= -1 && WINDOW_X + radius < locationX)
@@ -51,12 +56,12 @@ void Player::Update()
 		}
 
 		//プレイヤーの縦の移動(上)
-		if (Get_MoveY <= -1 && WINDOW_Y + radius < locationY)
+		if (Get_MoveY >= -1 && WINDOW_Y + radius < locationY)
 		{
 			locationY -= speed;
 		}
 		//プレイヤーの縦の移動(下)
-		if (Get_MoveY >= 1 && locationY < WINDOW_HEIGHT - radius)
+		if (Get_MoveY <= 1 && locationY < WINDOW_HEIGHT - radius)
 		{
 			locationY += speed;
 		}
@@ -75,6 +80,8 @@ void Player::Draw()
 
 	DrawFormatString(0, 80, 0xffffff, "%d", locationX, TRUE);
 	DrawFormatString(0, 120, 0xffffff, "%d", locationY, TRUE);
+
+	DrawFormatString(0, 160, 0xffffff, "%d", Get_Button, TRUE);
 
 }
 
