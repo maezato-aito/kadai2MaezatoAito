@@ -16,13 +16,14 @@ EndScene::~EndScene()
 	delete this;
 }
 //描画以外の更新
-void EndScene::Update()
+AbstractScene* EndScene::Update()
 {
 	//タイムの加算処理＆終了
 	if (++time > 180)
 	{
 		DxLib_End();
 	}
+	return this;
 }
 //描画の更新
 void EndScene::Draw() const

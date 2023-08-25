@@ -1,12 +1,13 @@
 #pragma once
 #include"BulletsSpawner.h"
+#include"Bullet.h"
 
 class NwaySpawner:BulletsSpawner
 {
 public:
 	NwaySpawner();
 	~NwaySpawner();
-	void Shoot() override;
+	void Shoot(GameMain* gm, int x, int y) override;
 
 protected:
 	int numBullets;// (”­Ë‚·‚é’e‚Ì”)

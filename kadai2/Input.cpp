@@ -7,7 +7,18 @@ char Input::OldKey[16];
 char Input::NowKey[16];
 
 
-XINPUT_STATE input;
+XINPUT_STATE Input::input;
+
+void Input::Update()
+{
+	GetJoypadXInputState(DX_INPUT_KEY_PAD1, &input);
+
+	for (int i = 0; i < 16; i++)
+	{
+		OldKey[i] = NowKey[i];//前回の入力ボタン
+		NowKey[i] = input.Buttons[i];//今の入力ボタン
+	}
+}
 
 int Input::Get_LAnlogSticX()
 {
@@ -27,19 +38,7 @@ int Input::Get_LAnlogSticY()
 	return L_AnalogStickY;
 }
 
-int Input::Get_Buttons()
+int Input::Get_Buttons(int key)
 {
-	GetJoypadXInputState(DX_INPUT_PAD1, &input);
-
-	for (int i = 0; i < 16; i++)
-	{
-		//OldKey[i] = NowKey[i];//前回の入力ボタン
-		NowKey[i] = input.Buttons[i];//今の入力ボタン
-
-		//ボタンが押されたらそのボタンが何かを返す
-		if (input.Buttons[i] == 1)
-		{
-			return i;
-		}
-	}
+	return NowKey[key];
 }

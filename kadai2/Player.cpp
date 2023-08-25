@@ -1,5 +1,5 @@
 #include"Player.h"
-
+#include "GameMain.h"
 Player::Player()
 {
 	//リモコンの左スティックの入力受け取り用変数
@@ -20,35 +20,34 @@ Player::Player()
 	radius = 30;
 
 	//弾
-	//weapon = new BulletsSpawner();
+	weapon = new NwaySpawner();
 
 	//プレイヤーの画像
 	/*image = LoadGraph("");*/
-
 
 }
 
 Player::~Player()
 {
-
+	delete weapon;
 }
 
-void Player::Update()
+void Player::Update(GameMain* gm)
 {
 	//アナログスティックの入力の受け取り
 	Get_MoveX = Input::Get_LAnlogSticX();
 	Get_MoveY = Input::Get_LAnlogSticY();
 
 	//入力ボタンを変数に入れる
-	Get_Button = Input::Get_Buttons();
-
+	DrawFormatString(0, 160, 0xffffff, "%d", Input::Get_Buttons(XINPUT_BUTTON_A), TRUE);
 	//Aボタンが押されたら
-	if (Get_Button == XINPUT_BUTTON_A) 
+	if (Input::Get_Buttons(XINPUT_BUTTON_A) == 1)
 	{
 		//弾を呼び出す
 		
+		weapon->Shoot(gm, locationX, locationY);
 
-		DrawString(0, 160, "発射", 0xffffff, TRUE);
+		
 	}
 
 		//プレイヤーの横移動(左)

@@ -18,7 +18,7 @@ TitleScene::~TitleScene()
 	delete this;
 }
 //描画以外の更新
-void TitleScene::Update()
+AbstractScene* TitleScene::Update()
 {
 	/*if (b & PAD_INPUT_DOWN)
 	{
@@ -36,6 +36,7 @@ void TitleScene::Update()
 			menyu = 2;
 		}
 	}*/
+	return this;
 }
 //描画の更新
 void TitleScene::Draw() const 

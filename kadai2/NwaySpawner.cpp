@@ -1,19 +1,18 @@
 #include "NwaySpawner.h"
-
+#include "GameMain.h"
 NwaySpawner::NwaySpawner()
 {
-	bullet = new Bullet();
 }
 NwaySpawner::~NwaySpawner()
 {
 	delete bullet;
 }
-void NwaySpawner::Shoot()
+void NwaySpawner::Shoot(GameMain* gm,int x,int y)
 {
 	speed = 3;//’e‚Ì‘¬“x
 	angle = 0;//’e‚ÌŠp“x
 	numBullets = 1;//”­ŽË‚·‚é’e‚Ì”
 
-	bullet->Update();
-	bullet->Draw();
+		gm->CreateBullets( x, y);
+
 }

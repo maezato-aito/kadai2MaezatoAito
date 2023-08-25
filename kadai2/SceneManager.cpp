@@ -2,9 +2,10 @@
 #include"SceneManager.h"
 
 //アップデート処理
-void SceneManager::Update()
+AbstractScene* SceneManager::Update()
 {
 	mScene->Update();
+	return this;
 }
 //描画処理
 void SceneManager::Draw()const

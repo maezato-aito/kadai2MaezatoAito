@@ -4,6 +4,7 @@
 //#include"TitleScene.h"
 #include"GameMain.h"
 #include"FpsCont.h"
+#include"Input.h"
 
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
@@ -32,7 +33,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	//ゲームループ
 	while (ProcessMessage() == 0 && SMG.change() != nullptr) 
 	{
-
+		Input::Update();
 		// 画面の初期化
 		ClearDrawScreen();
 		//タイトルの描画

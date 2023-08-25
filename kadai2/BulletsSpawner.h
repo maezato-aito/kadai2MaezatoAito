@@ -1,9 +1,10 @@
 #pragma once
 #include"Bullet.h"
+class GameMain;
 class BulletsSpawner
 {
 public:
-	 virtual void Shoot() = 0 ;
+	 virtual void Shoot(GameMain* gm, int x, int y) = 0 ;
 
 protected:
 

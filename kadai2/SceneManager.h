@@ -18,7 +18,7 @@ public:
 	}
 
 	//•`‰æˆÈŠO‚ÌXV‚ğÀ‘•‚·‚é
-	void Update() override;
+	AbstractScene* Update() override;
 
 	//•`‰æ‚ÉŠÖ‚·‚é‚±‚Æ‚ğÀ‘•‚·‚é
 	void Draw()const override;

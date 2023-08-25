@@ -7,8 +7,11 @@ public:
 	static int Get_LAnlogSticX();
 	static int Get_LAnlogSticY();
 
-	static int Get_Buttons();
+	static int Get_Buttons(int key);
 
+	static void Update();
+
+	static XINPUT_STATE input;
 private:
 
 

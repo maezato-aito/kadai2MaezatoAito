@@ -1,24 +1,43 @@
 #include"Bullet.h"
 
-int Bullet::speed = 3;
-int Bullet::BLx = 0;
-int Bullet::BLy = 0;
+Bullet::Bullet(int x, int y)
+{
+	locationX=x;//X座標
+	locationY=y;//Y座標
 
+
+	/*player = new Player();*/
+}
+//Bullet::Bullet(float a)
+//{
+//	locationX=20;//X座標
+//	locationY=50;//Y座標
+//
+//	/*player = new Player();*/
+//}
+Bullet::~Bullet()
+{
+	/*delete player;*/
+}
 void Bullet::Update()
 {
 	//弾の座標移動
-	if (BLx < WINDOW_WIDTH)
+	if (locationX < WINDOW_WIDTH)
 	{
-		BLx += speed;
+		locationX += 1;
 	}
 }
-void Bullet::Draw()
+void Bullet::Draw()const
 {
 	//弾の描画
-	DrawCircle(BLx, BLy, 0xffffff, TRUE);
+	DrawCircle(locationX, locationY,10,0xf12fff, TRUE);
 
 }
 void Bullet::GetDamage()
+{
+
+}
+void Bullet::SetupBullets(int x, int y, int d, int s, float a)
 {
 
 }

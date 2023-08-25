@@ -1,19 +1,19 @@
 #pragma once
 #include"comon.h"
 #include"CharaBase.h"
-#include"BulletsSpawner.h"
+#include"NwaySpawner.h"
 
 #include"Input.h"
-
+class GameMain;
 class Player:CharaBase
 {
 public:
 	Player();
 	~Player();
 
-	/*BulletsSpawner* weapon;*/
+	NwaySpawner* weapon;
 
-	void Update() override;
+	void Update(GameMain* gm) override;
 
 	void Draw() override;
 
@@ -25,7 +25,7 @@ private:
 	int Get_MoveX;
 	int Get_MoveY;
 
-	char Get_Button;
+	int Get_Button;
 
 };
 
