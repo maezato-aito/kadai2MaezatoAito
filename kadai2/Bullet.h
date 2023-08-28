@@ -17,11 +17,12 @@ public://アクセス可能
 
 protected://継承
 
+	int Bulletsflg;		//弾があるなら:1 弾がないなら:0
 	int damage;			//(ダメージ)
 	int speed;			//(速度)
-	float angle;			//(角度)
+	float angle;		//(角度)
 	int acceleration;	//(速度の変化量)
-	float angulVelocity;	//(角度の変化量)
+	float angulVelocity;//(角度の変化量)
 
 private://アクセス不可
 

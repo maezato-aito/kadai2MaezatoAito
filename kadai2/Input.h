@@ -3,11 +3,21 @@
 class Input
 {
 public:
-
+	//左スティックの値を返す
 	static int Get_LAnlogSticX();
 	static int Get_LAnlogSticY();
 
-	static int Get_Buttons(int key);
+	//左スティックの値を返す
+	static int Get_RAnlogSticX();
+	static int Get_RAnlogSticY();
+
+	//左右トリガーの値を返す
+	static int Get_RTrigger();
+	static int Get_LTrigger();
+
+	static int Get_NowButtons(int key);//前のボタンの入力を受け取る
+	static int Get_OldButtons(int key);//今のボタンの入力を取る
+	static int Get_ButtonFlg(int key);//今と前のボタンの入力を比べる
 
 	static void Update();
 
@@ -28,12 +38,22 @@ private:
 		short		ThumbRY;	// 右スティックの縦軸値( -32768 ～ 32767 )
 	};
 
-	//左スティックの傾きを取得する
-	static int L_AnalogStickX;
-	static int L_AnalogStickY;
+	static int L_AnalogStickX;//左スティックのX傾きの変数
+	static int L_AnalogStickY;//左スティックのY傾きの変数
 
-	static int Key;
-	static char OldKey[16];
-	static char NowKey[16];
+	
+	static int R_AnalogStickX;//右スティックのX傾きの変数
+	static int R_AnalogStickY;//右スティックのY傾きの変数
+	
+	static int R_Trigger;//右のトリガーを取得する変数
+	static int L_Trigger;//左のトリガーを取得する変数
+
+	static int Key;//ボタン入力配列用変数
+
+	
+	static char OldB[16];//前のボタンの入力を受け取る変数
+	static char NowB[16];//今のボタンの入力を取る変数
+	static char BFlg[16];//今と前のボタンの入力を比べる変数
+
 	
 };

@@ -11,7 +11,7 @@ class GameMain :public AbstractScene
 {
 private:
 	Player* player;
-	Bullet* bullets[100];
+	Bullet* bullets[1000];
 
 public:
 	//コンストラクタ

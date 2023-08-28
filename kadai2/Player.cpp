@@ -7,7 +7,6 @@ Player::Player()
 	Get_MoveY = 0;
 
 	//リモコンのボタン入力の受け取り用変数
-	Get_Button = 0;
 
 	//プレイヤーの座標
 	locationX = 150;
@@ -38,17 +37,23 @@ void Player::Update(GameMain* gm)
 	Get_MoveX = Input::Get_LAnlogSticX();
 	Get_MoveY = Input::Get_LAnlogSticY();
 
-	//入力ボタンを変数に入れる
-	DrawFormatString(0, 160, 0xffffff, "%d", Input::Get_Buttons(XINPUT_BUTTON_A), TRUE);
+	for(int i = 0; i < 16; i++)
+	{
+		OldB[i] = NowB[i];//前回の入力ボタン
+		NowB[i] = Input::Get_NowButtons(i);//今の入力ボタン
+		BFlg[i] = NowB[i] & ~OldB[i];
+	}
+
 	//Aボタンが押されたら
-	if (Input::Get_Buttons(XINPUT_BUTTON_A) == 1)
+	if (BFlg[12] == 1)
 	{
 		//弾を呼び出す
-		
 		weapon->Shoot(gm, locationX, locationY);
-
-		
 	}
+	//入力ボタンを変数に入れる
+	DrawFormatString(0, 160, 0xffffff, "%d", BFlg[12], TRUE);
+	
+	
 
 		//プレイヤーの横移動(左)
 		if (Get_MoveX <= -1 && WINDOW_X + radius < locationX)

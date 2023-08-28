@@ -25,7 +25,10 @@ private:
 	int Get_MoveX;
 	int Get_MoveY;
 
-	int Get_Button;
+	char OldB[16];
+	char NowB[16];
+	char BFlg[16];
+
 
 };
 

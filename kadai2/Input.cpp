@@ -3,8 +3,15 @@
 int Input::L_AnalogStickX = 0;
 int Input::L_AnalogStickY = 0;
 
-char Input::OldKey[16];
-char Input::NowKey[16];
+int Input::R_AnalogStickX = 0;
+int Input::R_AnalogStickY = 0;
+
+int Input::L_Trigger = 0;
+int Input::R_Trigger = 0;
+
+char Input::OldB[16];
+char Input::NowB[16];
+char Input::BFlg[16];
 
 
 XINPUT_STATE Input::input;
@@ -15,30 +22,58 @@ void Input::Update()
 
 	for (int i = 0; i < 16; i++)
 	{
-		OldKey[i] = NowKey[i];//前回の入力ボタン
-		NowKey[i] = input.Buttons[i];//今の入力ボタン
+		OldB[i] = NowB[i];//前回の入力ボタン
+		NowB[i] = input.Buttons[i];//今の入力ボタン
+		BFlg[i] = NowB[i] & ~OldB[i];
 	}
+
+	L_AnalogStickX=input.ThumbLX;
+	L_AnalogStickY=input.ThumbLY;
+
+	R_AnalogStickX=input.ThumbRX; 
+	R_AnalogStickY=input.ThumbRY; 
+
+	R_Trigger=input.LeftTrigger;
+	L_Trigger=input.RightTrigger;
+
 }
 
 int Input::Get_LAnlogSticX()
 {
-	GetJoypadXInputState(DX_INPUT_PAD1, &input);
-
-	L_AnalogStickX = input.ThumbLX;
-
 	return L_AnalogStickX;
 }
-
 int Input::Get_LAnlogSticY()
 {
-	GetJoypadXInputState(DX_INPUT_PAD1, &input);
-
-	L_AnalogStickY = input.ThumbLY;
-
 	return L_AnalogStickY;
 }
 
-int Input::Get_Buttons(int key)
+int Input::Get_RAnlogSticX()
 {
-	return NowKey[key];
+	return R_AnalogStickX;
+}
+int Input::Get_RAnlogSticY()
+{
+	return R_AnalogStickY;
+}
+
+int Input::Get_RTrigger()
+{
+	return R_Trigger;
+}
+int Input::Get_LTrigger() 
+{
+	return L_Trigger;
+}
+
+int Input::Get_NowButtons(int key)
+{
+	return NowB[key];
+}
+int Input::Get_OldButtons(int key)
+{
+	return OldB[key];
+}
+int Input::Get_ButtonFlg(int key)
+{
+	return BFlg[key];
 }

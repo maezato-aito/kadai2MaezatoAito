@@ -6,7 +6,7 @@
 GameMain::GameMain()
 {
 	player = new Player();
-	for (int i = 0; i < 100; i++)
+	for (int i = 0; i < 1000; i++)
 	{
 		bullets[i] = nullptr;
 	}
@@ -21,7 +21,7 @@ GameMain::~GameMain()
 AbstractScene* GameMain::Update()
 {
 	player->Update(this);
-	for (int i = 0; i < 100; i++)
+	for (int i = 0; i < 1000; i++)
 	{
 		if (bullets[i] != nullptr) {
 			bullets[i]->Update();
@@ -38,7 +38,7 @@ void GameMain::Draw() const
 	
 	player->Draw();
 
-	for (int i = 0; i < 100; i++)
+	for (int i = 0; i < 1000; i++)
 	{
 		if (bullets[i] != nullptr) {
 			bullets[i]->Draw();
@@ -55,10 +55,9 @@ AbstractScene* GameMain::change()
 
 void GameMain::CreateBullets(int x,int y)
 {
-	for (int i = 0; i < 100; i++)
+	for (int i = 0; i < 1000; i++)
 	{
 		if (bullets[i] == nullptr) {
-			//this->bullets[i] = bullets;
 			bullets[i] = new Bullet(x, y);
 			break;
 		}

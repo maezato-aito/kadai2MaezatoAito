@@ -20,22 +20,6 @@ TitleScene::~TitleScene()
 //描画以外の更新
 AbstractScene* TitleScene::Update()
 {
-	/*if (b & PAD_INPUT_DOWN)
-	{
-		++menyu;
-		if (++menyu > 2)
-		{
-			menyu = 0;
-		}
-	}*/
-
-	/*if (KeyFlg & PAD_INPUT_UP) {
-		--menyu;
-		if (--menyu < 0)
-		{
-			menyu = 2;
-		}
-	}*/
 	return this;
 }
 //描画の更新

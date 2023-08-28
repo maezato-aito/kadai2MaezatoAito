@@ -5,26 +5,22 @@ Bullet::Bullet(int x, int y)
 	locationX=x;//X座標
 	locationY=y;//Y座標
 
-
-	/*player = new Player();*/
+	Bulletsflg = 0;
 }
-//Bullet::Bullet(float a)
-//{
-//	locationX=20;//X座標
-//	locationY=50;//Y座標
-//
-//	/*player = new Player();*/
-//}
 Bullet::~Bullet()
 {
-	/*delete player;*/
+
 }
 void Bullet::Update()
 {
 	//弾の座標移動
-	if (locationX < WINDOW_WIDTH)
+	if (WINDOW_X < locationX < WINDOW_WIDTH)
 	{
-		locationX += 1;
+		locationX += 20;
+	}
+	else
+	{
+
 	}
 }
 void Bullet::Draw()const

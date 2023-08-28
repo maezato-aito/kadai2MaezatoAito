@@ -1,3 +1,4 @@
-﻿  GameMain.cpp
-C:\PG\kadai2MaezatoAito\kadai2\GameMain.cpp(18,18): warning C4154: 配列の delete が定義されていません。配列は、ポインターに変換されます。
+﻿  Bullet.cpp
+  Player.cpp
+  コードを生成中...
   kadai2.vcxproj -> C:\PG\kadai2MaezatoAito\kadai2\x64\Debug\kadai2.exe
