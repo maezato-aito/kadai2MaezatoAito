@@ -3,6 +3,7 @@
 #include"SceneManager.h"
 #include"Input.h"
 #include"Player.h"
+#include"Enemy.h"
 #include"Bullet.h"
 
 
@@ -11,6 +12,7 @@ class GameMain :public AbstractScene
 {
 private:
 	Player* player;
+	Enemy* enemy;
 	Bullet* bullets[1000];
 
 public:

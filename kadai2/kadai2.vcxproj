@@ -24,6 +24,7 @@
     <ClInclude Include="CharaBase.h" />
     <ClInclude Include="comon.h" />
     <ClInclude Include="EndScene.h" />
+    <ClInclude Include="Enemy.h" />
     <ClInclude Include="FpsCont.h" />
     <ClInclude Include="GameMain.h" />
     <ClInclude Include="Input.h" />
@@ -38,6 +39,7 @@
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="CharaBase.cpp" />
     <ClCompile Include="EndScene.cpp" />
+    <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="FpsCont.cpp" />
     <ClCompile Include="GameMain.cpp" />
     <ClCompile Include="Input.cpp" />

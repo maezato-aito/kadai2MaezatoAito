@@ -6,6 +6,8 @@
 GameMain::GameMain()
 {
 	player = new Player();
+	enemy = new Enemy();
+
 	for (int i = 0; i < 1000; i++)
 	{
 		bullets[i] = nullptr;
@@ -15,6 +17,7 @@ GameMain::GameMain()
 GameMain::~GameMain()
 {
 	delete player;
+	delete enemy;
 	delete[] bullets;
 }
 //•`‰æˆÈŠO‚ÌXV
@@ -37,6 +40,7 @@ void GameMain::Draw() const
 
 	
 	player->Draw();
+	enemy->Draw();
 
 	for (int i = 0; i < 1000; i++)
 	{
