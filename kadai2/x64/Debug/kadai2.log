@@ -1,11 +1,3 @@
 ﻿  Bullet.cpp
-C:\PG\kadai2MaezatoAito\kadai2\Bullet.cpp(17,15): warning C4804: '<': 演算中の 'bool' 型の使用方法が安全ではありません
-  EndScene.cpp
-  GameMain.cpp
-C:\PG\kadai2MaezatoAito\kadai2\GameMain.cpp(18,18): warning C4154: 配列の delete が定義されていません。配列は、ポインターに変換されます。
-  NwaySpawner.cpp
-  Player.cpp
-  TitleScene.cpp
-  main.cpp
-  コードを生成中...
+C:\PG\kadai2MaezatoAito\kadai2\Bullet.cpp(17,16): warning C4804: '<': 演算中の 'bool' 型の使用方法が安全ではありません
   kadai2.vcxproj -> C:\PG\kadai2MaezatoAito\kadai2\x64\Debug\kadai2.exe
